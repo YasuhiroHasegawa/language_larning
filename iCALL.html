@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html
+	lang="en"
+	style="
+		margin: 0;
+		padding: 0;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+	"
+>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<style>
+			:root {
+				--bg: white;
+				--col:   #1f2937;
+				--bg-dark: #0b0f19;
+				--col-dark: #f3f4f6;
+			}
+
+
+			body {
+				background: var(--bg);
+				color: var(--col);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: var(--bg-dark);
+					color: var(--col-dark);
+				}
+			}
+		</style>
+
+		<meta property="og:url" content="https://gradio.app/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="" />
+		<meta property="og:title" content="Adjective Transformer" />
+		<meta
+			property="og:description"
+			content=""
+		/>
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:creator" content="@teamGradio" />
+		<meta name="twitter:title" content="Adjective Transformer" />
+		<meta
+			name="twitter:description"
+			content=""
+		/>
+		<meta name="twitter:image" content="" />
+
+		<script data-gradio-mode>
+			window.__gradio_mode__ = "app";
+			window.iFrameResizer = {
+				heightCalculationMethod: "taggedElement"
+			};
+			window.parent?.postMessage(
+				{ type: "SET_SCROLLING", enabled: false },
+				"*"
+			);
+		</script>
+
+		<script>window.gradio_config = {"version":"4.31.0","mode":"interface","app_id":16174886709253422351,"dev_mode":false,"analytics_enabled":true,"components":[{"id":44,"type":"markdown","props":{"value":"\u003ch1 style=\u0027text-align: center; margin-bottom: 1rem\u0027\u003eAdjective Transformer\u003c/h1\u003e","show_label":true,"rtl":false,"latex_delimiters":[{"left":"$$","right":"$$","display":true}],"visible":true,"elem_classes":[],"sanitize_html":true,"line_breaks":false,"header_links":false,"name":"markdown","_selectable":false},"skip_api":false,"component_class_id":"654b407b152b689a75ae6e936cdf1be2","key":null,"api_info":{"type":"string"},"example_inputs":"# Hello!"},{"id":45,"type":"markdown","props":{"value":"Enter a sentence to transform its adjectives into comparative and superlative forms, correcting articles where necessary.","show_label":true,"rtl":false,"latex_delimiters":[{"left":"$$","right":"$$","display":true}],"visible":true,"elem_classes":[],"sanitize_html":true,"line_breaks":false,"header_links":false,"name":"markdown","_selectable":false},"skip_api":false,"component_class_id":"654b407b152b689a75ae6e936cdf1be2","key":null,"api_info":{"type":"string"},"example_inputs":"# Hello!"},{"id":46,"type":"row","props":{"variant":"default","visible":true,"equal_height":false,"name":"row"},"skip_api":true,"component_class_id":"58f59d1caa4b63161ae89f53fb1ea3e9","key":null},{"id":47,"type":"column","props":{"scale":1,"min_width":320,"variant":"panel","visible":true,"name":"column"},"skip_api":true,"component_class_id":"73b3a7d60a2ccce94d4900e01c75247c","key":null},{"id":48,"type":"column","props":{"scale":1,"min_width":320,"variant":"default","visible":true,"name":"column"},"skip_api":true,"component_class_id":"73b3a7d60a2ccce94d4900e01c75247c","key":null},{"id":39,"type":"textbox","props":{"lines":1,"max_lines":20,"label":"original_text","show_label":true,"container":true,"min_width":160,"visible":true,"autofocus":false,"autoscroll":true,"elem_classes":[],"type":"text","rtl":false,"show_copy_button":false,"name":"textbox","_selectable":false},"skip_api":false,"component_class_id":"3dbcbede1deda3e92adb8f07f3f93792","key":null,"api_info":{"type":"string"},"example_inputs":"Hello!!"},{"id":40,"type":"textbox","props":{"lines":1,"max_lines":20,"label":"comparison_target","show_label":true,"container":true,"min_width":160,"visible":true,"autofocus":false,"autoscroll":true,"elem_classes":[],"type":"text","rtl":false,"show_copy_button":false,"name":"textbox","_selectable":false},"skip_api":false,"component_class_id":"3dbcbede1deda3e92adb8f07f3f93792","key":null,"api_info":{"type":"string"},"example_inputs":"Hello!!"},{"id":41,"type":"textbox","props":{"lines":1,"max_lines":20,"label":"superlative_group","show_label":true,"container":true,"min_width":160,"visible":true,"autofocus":false,"autoscroll":true,"elem_classes":[],"type":"text","rtl":false,"show_copy_button":false,"name":"textbox","_selectable":false},"skip_api":false,"component_class_id":"3dbcbede1deda3e92adb8f07f3f93792","key":null,"api_info":{"type":"string"},"example_inputs":"Hello!!"},{"id":49,"type":"form","props":{"scale":0,"min_width":0,"name":"form"},"skip_api":true,"component_class_id":"6b27d618eebbcdddb5d84ac543e5ab5b","key":null},{"id":50,"type":"row","props":{"variant":"default","visible":true,"equal_height":true,"name":"row"},"skip_api":true,"component_class_id":"58f59d1caa4b63161ae89f53fb1ea3e9","key":null},{"id":51,"type":"button","props":{"value":"Clear","variant":"secondary","visible":true,"interactive":true,"elem_classes":[],"show_api":false,"name":"button","_selectable":false},"skip_api":true,"component_class_id":"67b70c2b3d0c6e02ae02897676b082d7","key":null},{"id":52,"type":"button","props":{"value":"Submit","variant":"primary","visible":true,"interactive":true,"elem_classes":[],"name":"button","_selectable":false},"skip_api":true,"component_class_id":"089297e7fee3574c50894d2f697fddc7","key":null},{"id":53,"type":"column","props":{"scale":1,"min_width":320,"variant":"panel","visible":true,"name":"column"},"skip_api":true,"component_class_id":"73b3a7d60a2ccce94d4900e01c75247c","key":null},{"id":42,"type":"textbox","props":{"lines":1,"max_lines":20,"label":"output 0","show_label":true,"container":true,"min_width":160,"interactive":false,"visible":true,"autofocus":false,"autoscroll":true,"elem_classes":[],"type":"text","rtl":false,"show_copy_button":false,"name":"textbox","_selectable":false},"skip_api":false,"component_class_id":"3dbcbede1deda3e92adb8f07f3f93792","key":null,"api_info":{"type":"string"},"example_inputs":"Hello!!"},{"id":43,"type":"textbox","props":{"lines":1,"max_lines":20,"label":"output 1","show_label":true,"container":true,"min_width":160,"interactive":false,"visible":true,"autofocus":false,"autoscroll":true,"elem_classes":[],"type":"text","rtl":false,"show_copy_button":false,"name":"textbox","_selectable":false},"skip_api":false,"component_class_id":"3dbcbede1deda3e92adb8f07f3f93792","key":null,"api_info":{"type":"string"},"example_inputs":"Hello!!"},{"id":54,"type":"row","props":{"variant":"default","visible":true,"equal_height":true,"name":"row"},"skip_api":true,"component_class_id":"58f59d1caa4b63161ae89f53fb1ea3e9","key":null},{"id":55,"type":"button","props":{"value":"Flag","variant":"secondary","visible":true,"interactive":true,"elem_classes":[],"name":"button","_selectable":false},"skip_api":true,"component_class_id":"089297e7fee3574c50894d2f697fddc7","key":null},{"id":56,"type":"form","props":{"scale":0,"min_width":0,"name":"form"},"skip_api":true,"component_class_id":"6b27d618eebbcdddb5d84ac543e5ab5b","key":null}],"css":null,"connect_heartbeat":false,"js":null,"head":null,"title":"Adjective Transformer","space_id":null,"enable_queue":true,"show_error":false,"show_api":true,"is_colab":true,"max_file_size":null,"stylesheets":["https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600\u0026display=swap","https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600\u0026display=swap"],"theme":"default","protocol":"sse_v3","body_css":{"body_background_fill":"white","body_text_color":"#1f2937","body_background_fill_dark":"#0b0f19","body_text_color_dark":"#f3f4f6"},"fill_height":false,"layout":{"id":38,"children":[{"id":44},{"id":45},{"id":46,"children":[{"id":47,"children":[{"id":48,"children":[{"id":49,"children":[{"id":39},{"id":40},{"id":41}]}]},{"id":50,"children":[{"id":51},{"id":52}]}]},{"id":53,"children":[{"id":56,"children":[{"id":42},{"id":43}]},{"id":54,"children":[{"id":55}]}]}]}]},"dependencies":[{"targets":[[52,"click"],[39,"submit"],[40,"submit"],[41,"submit"]],"inputs":[39,40,41],"outputs":[42,43],"backend_fn":true,"js":null,"queue":null,"api_name":"predict","scroll_to_output":true,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":true,"zerogpu":false},{"targets":[[51,"click"]],"inputs":[],"outputs":[39,40,41,42,43],"backend_fn":false,"js":"() =\u003e [null, null, null, null, null]","queue":false,"api_name":"js_fn","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":false,"zerogpu":false},{"targets":[[51,"click"]],"inputs":[],"outputs":[48],"backend_fn":false,"js":"() =\u003e [{\"variant\": null, \"visible\": true, \"__type__\": \"update\"}]\n            ","queue":false,"api_name":"js_fn_1","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":false,"zerogpu":false},{"targets":[[55,"click"]],"inputs":[],"outputs":[55],"backend_fn":true,"js":null,"queue":false,"api_name":"lambda","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":false,"zerogpu":false},{"targets":[[55,"click"]],"inputs":[39,40,41,42,43],"outputs":[55],"backend_fn":true,"js":null,"queue":false,"api_name":"Flag","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":false,"zerogpu":false},{"targets":[[51,"click"]],"inputs":[],"outputs":[55],"backend_fn":true,"js":null,"queue":false,"api_name":"reset","scroll_to_output":false,"show_progress":"full","every":null,"batch":false,"max_batch_size":4,"cancels":[],"types":{"continuous":false,"generator":false},"collects_event_data":false,"trigger_after":null,"trigger_only_on_success":false,"trigger_mode":"once","show_api":false,"zerogpu":false}],"root":"https://1207d77f7f97216cdd.gradio.live"};</script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.11/iframeResizer.contentWindow.min.js"
+			async
+		></script>
+		<script type="module" crossorigin src="https://gradio.s3-us-west-2.amazonaws.com/4.31.0/gradio.js"></script>
+		
+	</head>
+
+	<body
+		style="
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+		"
+	>
+		<gradio-app
+			control_page_title="true"
+			embed="false"
+			eager="true"
+			style="display: flex; flex-direction: column; flex-grow: 1"
+		>
+		</gradio-app>
+		<script>
+			const ce = document.getElementsByTagName("gradio-app");
+
+			if (ce[0]) {
+				ce[0].addEventListener("domchange", () => {
+					document.body.style.padding = "0";
+				});
+				document.body.style.padding = "0";
+			}
+		</script>
+	</body>
+</html>
